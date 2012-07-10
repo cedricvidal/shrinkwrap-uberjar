@@ -1,0 +1,3 @@
+implementingClassName=biz.vidal.shrinkwrap.uberjar.base.UberjarArchiveImpl
+extension=.jar
+archiveFormat=ZIP
