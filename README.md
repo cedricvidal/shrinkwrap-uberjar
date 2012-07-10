@@ -1,6 +1,8 @@
 Shrinkwrap Uberjar Archive Support
 ----------------------------------
 
+This is Uberjar support for the excellent JBoss [Shrinkwrap](http://www.jboss.org/shrinkwrap/) library.
+
 #### Clone and build project
 
 	$ git clone git://github.com/cedricvidal/shrinkwrap-uberjar.git
