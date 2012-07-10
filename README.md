@@ -3,10 +3,10 @@ Shrinkwrap Uberjar Archive Support
 
 #### Clone and build project
 
-$ git clone git://github.com/cedricvidal/shrinkwrap-uberjar.git
-$ cd shrinkwrap-uberjar
-$ cd sources
-$ mvn install
+	$ git clone git://github.com/cedricvidal/shrinkwrap-uberjar.git
+	$ cd shrinkwrap-uberjar
+	$ cd sources
+	$ mvn install
 
 #### Add dependencies to your project
 
