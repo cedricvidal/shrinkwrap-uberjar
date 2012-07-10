@@ -71,5 +71,10 @@ Shrinkwrap Uberjar support is built on the excellent [classworlds](http://classw
 
 For now, the classworlds-boot artifact needs to manually be merged into the uberjar and the classworlds jar needs to manually be injected into the uberjar.
 
+#### About uberjarring
+
+The author of the original maven 1 uberjar plugin wrote an excellent explanation of the uberjarring process:
+http://classworlds.codehaus.org/uberjar.html
+
 Cedric Vidal
 http://blog.proxiad.com
