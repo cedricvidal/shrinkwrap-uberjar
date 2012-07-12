@@ -14,6 +14,48 @@
 	<properties>
 		<shrinkwrap.version>1.0.1</shrinkwrap.version>
 	</properties>
+	<scm>
+		<developerConnection>scm:git:ssh://git@github.com/cedricvidal/shrinkwrap-uberjar.git</developerConnection>
+		<connection>scm:git:ssh://git@github.com/cedricvidal/shrinkwrap-uberjar.git</connection>
+		<url>git:ssh://git@github.com/cedricvidal/shrinkwrap-uberjar.git</url>
+	</scm>
+	<distributionManagement>
+		<downloadUrl>https://github.com/cedricvidal/shrinkwrap-uberjar</downloadUrl>
+		<repository>
+			<id>cedricvidal-cloudbees-release</id>
+			<name>cedricvidal-cloudbees-release</name>
+			<url>dav:https://repository-cedricvidal.forge.cloudbees.com/release/</url>
+		</repository>
+		<snapshotRepository>
+			<id>cedricvidal-cloudbees-snapshot</id>
+			<name>cedricvidal-cloudbees-snapshot</name>
+			<url>dav:https://repository-cedricvidal.forge.cloudbees.com/snapshot/</url>
+		</snapshotRepository>
+	</distributionManagement>
+	<repositories>
+		<repository>
+			<id>cedricvidal-cloudbees-snapshot</id>
+			<name>cedricvidal-cloudbees-snapshot</name>
+			<url>https://repository-cedricvidal.forge.cloudbees.com/snapshot/</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>cedricvidal-cloudbees-release</id>
+			<name>cedricvidal-cloudbees-release</name>
+			<url>https://repository-cedricvidal.forge.cloudbees.com/release/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
@@ -50,7 +92,19 @@
 					<artifactId>maven-compiler-plugin</artifactId>
 					<version>2.5.1</version>
 				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-release-plugin</artifactId>
+					<version>2.3.2</version>
+				</plugin>
 			</plugins>
 		</pluginManagement>
+		<extensions>
+			<extension>
+				<groupId>org.apache.maven.wagon</groupId>
+				<artifactId>wagon-webdav-jackrabbit</artifactId>
+				<version>2.2</version>
+			</extension>
+		</extensions>
 	</build>
 </project>
