@@ -3,12 +3,19 @@ Shrinkwrap Uberjar Archive Support
 
 This is Uberjar support for the excellent JBoss [Shrinkwrap](http://www.jboss.org/shrinkwrap/) library.
 
-#### Clone and build project
+#### Add the following Maven repository to your pom.xml
 
-	$ git clone git://github.com/cedricvidal/shrinkwrap-uberjar.git
-	$ cd shrinkwrap-uberjar
-	$ cd sources
-	$ mvn install
+	<repository>
+		<id>cedricvidal-cloudbees-release</id>
+		<name>cedricvidal-cloudbees-release</name>
+		<url>https://repository-cedricvidal.forge.cloudbees.com/release/</url>
+		<releases>
+			<enabled>true</enabled>
+		</releases>
+		<snapshots>
+			<enabled>false</enabled>
+		</snapshots>
+	</repository>
 
 #### Add dependencies to your project
 
@@ -16,14 +23,14 @@ This is Uberjar support for the excellent JBoss [Shrinkwrap](http://www.jboss.or
 		<dependency>
 			<groupId>biz.vidal.shrinkwrap</groupId>
 			<artifactId>shrinkwrap-uberjar-api</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>0.0.3</version>
 			<type>jar</type>
 			<scope>compile</scope>
 		</dependency>
 		<dependency>
 			<groupId>biz.vidal.shrinkwrap</groupId>
 			<artifactId>shrinkwrap-uberjar-impl</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>0.0.3</version>
 			<type>jar</type>
 			<scope>compile</scope>
 		</dependency>
