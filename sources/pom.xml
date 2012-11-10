@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>biz.vidal.shrinkwrap</groupId>
 	<artifactId>shrinkwrap-uberjar</artifactId>
@@ -6,6 +7,12 @@
 	<packaging>pom</packaging>
 	<name>Shrinkwrap Uberjar POM</name>
 	<description>Uberjar archive support for Shrinkwrap</description>
+	<url>https://github.com/cedricvidal/shrinkwrap-uberjar</url>
+	<inceptionYear>2012</inceptionYear>
+	<organization>
+		<name>Cedric Vidal</name>
+		<url>http://vidal.biz/</url>
+	</organization>
 	<modules>
 		<module>shrinkwrap-uberjar-api</module>
 		<module>shrinkwrap-uberjar-impl</module>
@@ -17,8 +24,8 @@
 		<developerConnection>scm:git:ssh://git@github.com/cedricvidal/shrinkwrap-uberjar.git</developerConnection>
 		<connection>scm:git:ssh://git@github.com/cedricvidal/shrinkwrap-uberjar.git</connection>
 		<url>git:ssh://git@github.com/cedricvidal/shrinkwrap-uberjar.git</url>
-	  <tag>HEAD</tag>
-  </scm>
+		<tag>HEAD</tag>
+	</scm>
 	<distributionManagement>
 		<downloadUrl>https://github.com/cedricvidal/shrinkwrap-uberjar</downloadUrl>
 		<repository>
