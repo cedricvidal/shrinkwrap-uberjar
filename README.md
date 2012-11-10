@@ -10,6 +10,8 @@ This is Uberjar support for the excellent JBoss [Shrinkwrap](http://www.jboss.or
 	$ cd sources
 	$ mvn install
 
+[![Build Status](https://cedricvidal.ci.cloudbees.com/job/shrinkwrap-uberjar/badge/icon)](https://cedricvidal.ci.cloudbees.com/job/shrinkwrap-uberjar/)
+
 # Maven configuration
 
 #### Add the following Maven repository to your pom.xml
@@ -89,3 +91,5 @@ http://classworlds.codehaus.org/uberjar.html
 
 Cedric Vidal
 http://blog.proxiad.com
+
+[![Build on Cloudbees](http://web-static-cloudfront.s3.amazonaws.com/images/badges/BuiltOnDEV.png)](https://cedricvidal.ci.cloudbees.com/)
