@@ -92,4 +92,4 @@ http://classworlds.codehaus.org/uberjar.html
 Cedric Vidal
 http://blog.proxiad.com
 
-[![Build on Cloudbees](http://web-static-cloudfront.s3.amazonaws.com/images/badges/BuiltOnDEV.png)](https://cedricvidal.ci.cloudbees.com/)
+[![Build on Cloudbees](http://web-static-cloudfront.s3.amazonaws.com/images/badges/BuiltOnDEV.png)](http://www.cloudbees.com/)
