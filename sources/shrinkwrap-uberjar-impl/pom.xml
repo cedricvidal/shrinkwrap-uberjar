@@ -3,17 +3,17 @@
 	<parent>
 		<artifactId>shrinkwrap-uberjar</artifactId>
 		<groupId>biz.vidal.shrinkwrap</groupId>
-		<version>0.0.4-SNAPSHOT</version>
+		<version>0.0.4</version>
 	</parent>
 	<groupId>biz.vidal.shrinkwrap</groupId>
 	<artifactId>shrinkwrap-uberjar-impl</artifactId>
-	<version>0.0.4-SNAPSHOT</version>
+	<version>0.0.4</version>
 	<name>Shrinkwrap Uberjar Impl</name>
 	<dependencies>
 		<dependency>
 			<groupId>biz.vidal.shrinkwrap</groupId>
 			<artifactId>shrinkwrap-uberjar-api</artifactId>
-			<version>0.0.4-SNAPSHOT</version>
+			<version>0.0.4</version>
 			<type>jar</type>
 			<scope>compile</scope>
 		</dependency>
