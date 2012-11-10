@@ -32,7 +32,7 @@ This is Uberjar support for the excellent JBoss [Shrinkwrap](http://www.jboss.or
 		<dependency>
 			<groupId>biz.vidal.shrinkwrap</groupId>
 			<artifactId>shrinkwrap-uberjar-impl</artifactId>
-			<version>0.0.3</version>
+			<version>0.0.4</version>
 			<type>jar</type>
 			<scope>compile</scope>
 		</dependency>
