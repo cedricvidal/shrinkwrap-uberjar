@@ -1,10 +1,13 @@
 package biz.vidal.shrinkwrap.uberjar.base;
 import java.io.ByteArrayOutputStream;
+import java.io.IOException;
 import java.io.OutputStream;
 import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import java.util.jar.Attributes;
+import java.util.jar.Attributes.Name;
 import java.util.jar.Manifest;
 import java.util.logging.Logger;
 
@@ -16,7 +19,6 @@ import org.jboss.shrinkwrap.api.Filter;
 import org.jboss.shrinkwrap.api.asset.ArchiveAsset;
 import org.jboss.shrinkwrap.api.asset.Asset;
 import org.jboss.shrinkwrap.api.asset.ByteArrayAsset;
-import org.jboss.shrinkwrap.api.asset.StringAsset;
 import org.jboss.shrinkwrap.api.exporter.ZipExporter;
 import org.jboss.shrinkwrap.impl.base.container.ContainerBase;
 import org.jboss.shrinkwrap.impl.base.path.BasicPath;
@@ -89,7 +91,18 @@ public class UberjarArchiveImpl extends ContainerBase<UberjarArchive> implements
      */
     public UberjarArchiveImpl(final Archive<?> delegate) {
         super(UberjarArchive.class, delegate);
-        setManifest(new StringAsset("Main-Class: " + "org.codehaus.classworlds.uberjar.boot.Bootstrapper"));
+        Manifest manifest = new Manifest();
+        Attributes attrs = manifest.getMainAttributes();
+        attrs.put(Name.MAIN_CLASS, "org.codehaus.classworlds.uberjar.boot.Bootstrapper");
+        attrs.put(Name.MANIFEST_VERSION, "1.0");
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        try {
+            manifest.write(baos);
+        } catch (IOException e) {
+            throw new RuntimeException("Could not create uberjar manifest", e);
+        }
+        byte[] byteArray = baos.toByteArray();
+        setManifest(new ByteArrayAsset(byteArray));
     }
 
     // -------------------------------------------------------------------------------------||
